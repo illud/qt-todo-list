@@ -20,6 +20,21 @@ void MainWindow::on_btnAdd_clicked()
 {
     QListWidgetItem* item = new QListWidgetItem(ui->txtTask->text(), ui->listWidget);
     ui->listWidget->addItem(item);
+    item->setFlags(item->flags() | Qt::ItemIsEditable);
     ui->txtTask->clear();
+    ui->txtTask->setFocus();
+}
+
+
+void MainWindow::on_btnRemove_clicked()
+{
+    QListWidgetItem* item = ui->listWidget->takeItem(ui->listWidget->currentRow());
+    delete item;
+}
+
+
+void MainWindow::on_btnRemoveAll_clicked()
+{
+    ui->listWidget->clear();
 }
 

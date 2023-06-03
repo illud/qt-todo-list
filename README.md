@@ -1,1 +1,1 @@
-# qt-todo-list
+# qt-todo-listBuildwindeployqt.exe --no-translations "C:\release-path\release\qt-todo-list.exe"
